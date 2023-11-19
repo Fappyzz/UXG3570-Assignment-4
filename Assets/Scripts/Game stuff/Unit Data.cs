@@ -12,7 +12,6 @@ public class UnitData
     public string unitDesc;
     public List<UnitTrait> unitTraits;
 
-    public bool active = false;
 
     public Sprite unitArt;
     public GameObject unitPrefab;

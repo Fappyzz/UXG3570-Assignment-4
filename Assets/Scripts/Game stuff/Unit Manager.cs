@@ -5,11 +5,10 @@ using UnityEngine;
 public class UnitManager : MonoBehaviour
 {
     [SerializeField] List<ShopUnitDisplay> shopUnitDisplays = new List<ShopUnitDisplay>();
-    [SerializeField] List<UnitData> shopUnits = new List<UnitData>();
 
-    [SerializeField] List<UnitData> benchUnits = new List<UnitData>();
+    [SerializeField] List<StandingUnitDisplay> benchUnitDisplays = new List<StandingUnitDisplay>();
 
-    [SerializeField] List<UnitData> deployedUnits = new List<UnitData>();
+    [SerializeField] List<StandingUnitDisplay> deployedUnitDisplays = new List<StandingUnitDisplay>();
 
     [SerializeField] UnitLibrary unitLib;
 
@@ -17,62 +16,66 @@ public class UnitManager : MonoBehaviour
     [SerializeField] GameObject traitsPopupGameObjPrefab;
     [SerializeField] GameObject traitsPopupGameObjParent;
 
-    // Start is called before the first frame update
     void Start()
     {
         for (int i = 0; i < shopUnitDisplays.Count; i++)
         {
             shopUnitDisplays[i].SetUnitMan(this);
         }
+        
+        for (int i = 0; i < benchUnitDisplays.Count; i++)
+        {
+            benchUnitDisplays[i].SetUnitMan(this);
+        }
+        
+        for (int i = 0; i < deployedUnitDisplays.Count; i++)
+        {
+            deployedUnitDisplays[i].SetUnitMan(this);
+        }
+
+        SetupShop();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
 
-            //AddUnitToShop(unitLib.unitLib[0]);
-            SetupShop();
-            
         }
 
         if (Input.GetKeyDown(KeyCode.W))
         {
 
-            CheckForTraitDeploy(shopUnits[0].unitTraits[0]);
         }
 
         if (Input.GetKeyDown(KeyCode.E))
         {
 
-            CheckForTraitRemove(shopUnits[0].unitTraits[0]);
         }
     }
 
     public void SetupShop()
     {
-        shopUnits.Clear();
-
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < shopUnitDisplays.Count; i++)
         {
-            //AddUnitToShop(unitLib.unitLib[Random.Range(0, unitLib.unitLib.Count)]);
-            AddUnitToShop(unitLib.unitLib[0]);
-
             shopUnitDisplays[i].gameObject.SetActive(true);
-            shopUnitDisplays[i].SetUnitData(shopUnits[i]);
+            shopUnitDisplays[i].SetUnitData(GenerateFromLib());
             shopUnitDisplays[i].UpdateUnitDisplay();
         }
     }
 
-    public void AddUnitToShop(UnitData unit)
-    {
-        shopUnits.Add(CopyFields(unit));
-    }
-
     public void PurchaseUnit(UnitData unit)
     {
-        benchUnits.Add(CopyFields(unit));
+        for (int i = 0; i < benchUnitDisplays.Count; i++)
+        {
+            if (benchUnitDisplays[i].hasUnit == false)
+            {
+                benchUnitDisplays[i].ResetUnitDisplay();
+                benchUnitDisplays[i].SetUnitData(unit);
+                benchUnitDisplays[i].UpdateUnitDisplay(true);
+                return;
+            }
+        }
     }
 
     public void DeployUnit(UnitData unit)
@@ -81,9 +84,6 @@ public class UnitManager : MonoBehaviour
         {
             CheckForTraitDeploy(unit.unitTraits[i]);
         }
-
-        deployedUnits.Add(CopyFields(unit));
-        benchUnits.Remove(unit);
     }
 
     public void BenchUnit(UnitData unit)
@@ -92,9 +92,6 @@ public class UnitManager : MonoBehaviour
         {
             CheckForTraitRemove(unit.unitTraits[i]);
         }
-
-        benchUnits.Add(CopyFields(unit));
-        deployedUnits.Remove(unit);
     }
 
     public void SellUnitFromBench(UnitData unit)
@@ -104,7 +101,6 @@ public class UnitManager : MonoBehaviour
             CheckForTraitRemove(unit.unitTraits[i]);
         }
 
-        benchUnits.Remove(unit);
         //gain money
     }
 
@@ -115,7 +111,6 @@ public class UnitManager : MonoBehaviour
             CheckForTraitRemove(unit.unitTraits[i]);
         }
 
-        deployedUnits.Remove(unit);
         //gain money
     }
 
@@ -158,19 +153,21 @@ public class UnitManager : MonoBehaviour
         }
     }
 
-    private UnitData CopyFields(UnitData source)
+    public UnitData GenerateFromLib()
     {
-        UnitData newClone = new UnitData();
+        return unitLib.unitLib[Random.Range(0, unitLib.unitLib.Count)];
+    }
 
-        // Use reflection to get all fields from the source class
-        System.Reflection.FieldInfo[] fields = typeof(UnitData).GetFields();
-
-        foreach (var field in fields)
+    public bool DoesBenchHaveSpace()
+    {
+        for (int i = 0; i < benchUnitDisplays.Count; i++)
         {
-            // Copy the value of each field from the source to the destination
-            field.SetValue(newClone, field.GetValue(source));
+            if (benchUnitDisplays[i].hasUnit == false)
+            {
+                return true;
+            }
         }
 
-        return newClone;
+        return false;
     }
 }

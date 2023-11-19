@@ -19,16 +19,14 @@ public class ShopUnitDisplay : MonoBehaviour
 
     [Space(10)]
 
-    [SerializeField] UnitData unitData;
+    [SerializeField] public UnitData unitData;
 
 
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -53,22 +51,6 @@ public class ShopUnitDisplay : MonoBehaviour
         UpdateTraitsDisplay();
     }
 
-    public void SetUnitData(UnitData unitData)
-    {
-        this.unitData = unitData;
-    }
-
-    public void BuyThisUnit()
-    {
-        unitMan.PurchaseUnit(unitData);
-        this.gameObject.SetActive(false);
-    }
-
-    public void SetUnitMan(UnitManager unitMan)
-    {
-        this.unitMan = unitMan;
-    }
-
     public void UpdateTraitsDisplay()
     {
         for (int i = 0; i < traitsGameObjList.Count; i++)
@@ -77,7 +59,6 @@ public class ShopUnitDisplay : MonoBehaviour
         }
         traitsGameObjList.Clear();
 
-        Debug.Log(unitData.unitTraits);
         for (int i = 0; i < unitData.unitTraits.Count; i++)
         {
             GameObject newObject = Instantiate(traitsGameObjPrefab);
@@ -85,5 +66,40 @@ public class ShopUnitDisplay : MonoBehaviour
             traitsGameObjList.Add(newObject);
             newObject.GetComponent<Image>().sprite = unitData.unitTraits[i].traitArt;
         }
+    }
+
+    public void PurchaseThisUnit()
+    {
+        if (unitMan.DoesBenchHaveSpace())
+        {
+            unitMan.PurchaseUnit(unitData);
+            this.gameObject.SetActive(false);
+        }
+    }
+
+    public void SetUnitMan(UnitManager unitMan)
+    {
+        this.unitMan = unitMan;
+    }
+
+
+    public void SetUnitData(UnitData unitData)
+    {
+        this.unitData = CreateNewAndCopyFields(unitData);
+    }
+    private UnitData CreateNewAndCopyFields(UnitData source)
+    {
+        UnitData newClone = new UnitData();
+
+        // Use reflection to get all fields from the source class
+        System.Reflection.FieldInfo[] fields = typeof(UnitData).GetFields();
+
+        foreach (var field in fields)
+        {
+            // Copy the value of each field from the source to the destination
+            field.SetValue(newClone, field.GetValue(source));
+        }
+
+        return newClone;
     }
 }
