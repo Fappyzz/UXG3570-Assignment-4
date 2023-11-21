@@ -135,11 +135,11 @@ public class StandingUnit : MonoBehaviour
                     hitStandingUnitDisplay.ResetUnitDisplay();
                     hitStandingUnitDisplay.SetUnitData(standingUnitDisplay.unitData);
                     hitStandingUnitDisplay.UpdateUnitDisplay(false);
-                    hitStandingUnitDisplay.unitMan.BenchUnit(hitStandingUnitDisplay.unitData);
+                    hitStandingUnitDisplay.unitMan.DeployUnit(hitStandingUnitDisplay.unitData);
                     standingUnitDisplay.ResetUnitDisplay();
                     standingUnitDisplay.SetUnitData(hitUnitData);
                     standingUnitDisplay.UpdateUnitDisplay(true);
-                    standingUnitDisplay.unitMan.DeployUnit(hitUnitData);
+                    standingUnitDisplay.unitMan.BenchUnit(hitUnitData);
                 }
                 else
                 {
