@@ -47,6 +47,6 @@ public class TooltipManager : MonoBehaviour
     {
         gameObject.SetActive(false);
         textComponent.text = string.Empty;
-        unitSprite = null;
+        unitSprite.sprite = null;
     }    
 }
