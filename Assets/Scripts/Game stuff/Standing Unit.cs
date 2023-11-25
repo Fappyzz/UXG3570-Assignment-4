@@ -85,7 +85,7 @@ public class StandingUnit : MonoBehaviour
                     hitStandingUnitDisplay.UpdateUnitDisplay(true, benched);
                     standingUnitDisplay.ResetUnitDisplay();
                     standingUnitDisplay.SetUnitData(hitUnitData);
-                    standingUnitDisplay.UpdateUnitDisplay(true, benched);
+                    standingUnitDisplay.UpdateUnitDisplay(true, true);
                 }
                 else
                 {
@@ -113,7 +113,7 @@ public class StandingUnit : MonoBehaviour
                     hitStandingUnitDisplay.unitMan.BenchUnit(hitStandingUnitDisplay.unitData);
                     standingUnitDisplay.ResetUnitDisplay();
                     standingUnitDisplay.SetUnitData(hitUnitData);
-                    standingUnitDisplay.UpdateUnitDisplay(false, benched);
+                    standingUnitDisplay.UpdateUnitDisplay(false, true);
                     standingUnitDisplay.unitMan.DeployUnit(hitUnitData);
                 }
                 else
@@ -147,7 +147,7 @@ public class StandingUnit : MonoBehaviour
                     hitStandingUnitDisplay.unitMan.DeployUnit(hitStandingUnitDisplay.unitData);
                     standingUnitDisplay.ResetUnitDisplay();
                     standingUnitDisplay.SetUnitData(hitUnitData);
-                    standingUnitDisplay.UpdateUnitDisplay(true, benched);
+                    standingUnitDisplay.UpdateUnitDisplay(true, false);
                     standingUnitDisplay.unitMan.BenchUnit(hitUnitData);
                 }
                 else
@@ -174,7 +174,7 @@ public class StandingUnit : MonoBehaviour
                     hitStandingUnitDisplay.UpdateUnitDisplay(false, benched);
                     standingUnitDisplay.ResetUnitDisplay();
                     standingUnitDisplay.SetUnitData(hitUnitData);
-                    standingUnitDisplay.UpdateUnitDisplay(true, benched);
+                    standingUnitDisplay.UpdateUnitDisplay(true, true);
                 }
                 else
                 {

@@ -37,8 +37,6 @@ public class UnitManager : MonoBehaviour
     [SerializeField] GameObject exp2;
     [SerializeField] GameObject exp3;
 
-    List<UnitData> unitDataList = new List<UnitData>();
-
     public void Reroll()
     {
         if (money >= rerollCost)
@@ -157,7 +155,6 @@ public class UnitManager : MonoBehaviour
                     benchUnitDisplays[i].SetUnitData(unit);
                     benchUnitDisplays[i].UpdateUnitDisplayFromShop();
 
-                    unitDataList.Add(benchUnitDisplays[i].unitData);
                     return;
                 }
             }
@@ -172,7 +169,6 @@ public class UnitManager : MonoBehaviour
                     benchUnitDisplays[i].SetUnitData(unit);
                     benchUnitDisplays[i].UpdateUnitDisplayFromShop();
 
-                    unitDataList.Add(benchUnitDisplays[i].unitData);
                     return;
                 }
             }
@@ -182,7 +178,6 @@ public class UnitManager : MonoBehaviour
 
     public void SellUnit(UnitData unit)
     {
-        unitDataList.Remove(unit);
         money += unit.unitCost;
         currentUnits--;
         for (int i = 0; i < unit.unitTraits.Count; i++)
@@ -195,11 +190,39 @@ public class UnitManager : MonoBehaviour
     {
         int count = 0;
 
-        foreach (UnitData uD in unitDataList)
+        foreach (StandingUnitDisplay uD in benchUnitDisplays)
         {
-            if (uD.unitName == unit.unitName)
+            if (uD.unitData != null)
             {
-                count++;
+                if (uD.unitData.unitName == unit.unitName && unit.unitStar == 1)
+                {
+                    if (count < 2)
+                    {
+                        count++;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+            }
+            
+        }
+        foreach (StandingUnitDisplay uD in deployedUnitDisplays)
+        {
+            if (uD.unitData != null)
+            {
+                if (uD.unitData.unitName == unit.unitName && unit.unitStar == 1)
+                {
+                    if (count < 2)
+                    {
+                        count++;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
             }
         }
 
@@ -215,15 +238,51 @@ public class UnitManager : MonoBehaviour
 
     void RemoveIngredients(UnitData unit)
     {
-        foreach (UnitData uD in unitDataList)
+        int count = 0;
+        List<StandingUnitDisplay> unitsToRemove = new List<StandingUnitDisplay>();
+
+        foreach (StandingUnitDisplay uD in benchUnitDisplays)
         {
-            if (uD.unitName == unit.unitName)
+            if (uD.unitData != null)
             {
-                uD.unitSUD.ResetUnitDisplay();
+                if (uD.unitData.unitName == unit.unitName && unit.unitStar == 1)
+                {
+                    if (count < 2)
+                    {
+                        count++;
+                        unitsToRemove.Add(uD);
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+            }
+        }
+        foreach (StandingUnitDisplay uD in deployedUnitDisplays)
+        {
+            if (uD.unitData != null)
+            {
+                if (uD.unitData.unitName == unit.unitName && unit.unitStar == 1)
+                {
+                    if (count < 2)
+                    {
+                        count++;
+                        unitsToRemove.Add(uD);
+                        currentUnits--;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
             }
         }
 
-        unitDataList.RemoveAll(x => x.unitName == unit.unitName);
+        foreach (StandingUnitDisplay uD in unitsToRemove)
+        {
+            uD.ResetUnitDisplay();
+        }
     }
 
     public void DeployUnit(UnitData unit)

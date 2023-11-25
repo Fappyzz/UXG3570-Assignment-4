@@ -66,6 +66,7 @@ public class StandingUnitDisplay : MonoBehaviour
         }
 
         unitData = null;
+        
         hasUnit = false;
     }
 
