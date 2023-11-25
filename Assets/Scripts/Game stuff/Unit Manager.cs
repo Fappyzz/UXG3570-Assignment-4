@@ -155,6 +155,7 @@ public class UnitManager : MonoBehaviour
                     benchUnitDisplays[i].SetUnitData(unit);
                     benchUnitDisplays[i].UpdateUnitDisplayFromShop();
 
+                    Debug.Log(benchUnitDisplays[i].unitData.unitStar);
                     return;
                 }
             }
@@ -194,7 +195,7 @@ public class UnitManager : MonoBehaviour
         {
             if (uD.unitData != null)
             {
-                if (uD.unitData.unitName == unit.unitName && unit.unitStar == 1)
+                if (uD.unitData.unitName == unit.unitName && uD.unitData.unitStar == 1)
                 {
                     if (count < 2)
                     {
@@ -212,7 +213,7 @@ public class UnitManager : MonoBehaviour
         {
             if (uD.unitData != null)
             {
-                if (uD.unitData.unitName == unit.unitName && unit.unitStar == 1)
+                if (uD.unitData.unitName == unit.unitName && uD.unitData.unitStar == 1)
                 {
                     if (count < 2)
                     {
@@ -245,7 +246,7 @@ public class UnitManager : MonoBehaviour
         {
             if (uD.unitData != null)
             {
-                if (uD.unitData.unitName == unit.unitName && unit.unitStar == 1)
+                if (uD.unitData.unitName == unit.unitName && uD.unitData.unitStar == 1)
                 {
                     if (count < 2)
                     {
@@ -263,7 +264,7 @@ public class UnitManager : MonoBehaviour
         {
             if (uD.unitData != null)
             {
-                if (uD.unitData.unitName == unit.unitName && unit.unitStar == 1)
+                if (uD.unitData.unitName == unit.unitName && uD.unitData.unitStar == 1)
                 {
                     if (count < 2)
                     {
