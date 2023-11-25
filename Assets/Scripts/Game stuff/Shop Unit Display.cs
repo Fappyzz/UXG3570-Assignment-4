@@ -70,8 +70,9 @@ public class ShopUnitDisplay : MonoBehaviour
 
     public void PurchaseThisUnit()
     {
-        if (unitMan.DoesBenchHaveSpace())
+        if (unitMan.DoesBenchHaveSpace() && UnitManager.money >= unitData.unitCost)
         {
+            UnitManager.money -= unitData.unitCost;
             unitMan.PurchaseUnit(unitData);
             this.gameObject.SetActive(false);
         }

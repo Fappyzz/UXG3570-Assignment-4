@@ -36,6 +36,24 @@ public class StandingUnitDisplay : MonoBehaviour
         spawnedUnit.GetComponent<StandingUnit>().SetStandingUnitDisplay(this);
         spawnedUnit.GetComponent<StandingUnit>().benched = benched;
         hasUnit = true;
+
+        if (!benched)
+        {
+            UnitManager.currentUnits++;
+        }
+        else
+        {
+            UnitManager.currentUnits--;
+        }
+    }
+    
+    public void UpdateUnitDisplayFromShop()
+    {
+        spawnedUnit = Instantiate(unitData.unitPrefab);
+        spawnedUnit.transform.position = spawnPos.transform.position;
+        spawnedUnit.GetComponent<StandingUnit>().SetStandingUnitDisplay(this);
+        spawnedUnit.GetComponent<StandingUnit>().benched = true;
+        hasUnit = true;
     }
 
     public void ResetUnitDisplay()

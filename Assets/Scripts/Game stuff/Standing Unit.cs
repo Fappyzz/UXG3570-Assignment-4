@@ -119,7 +119,7 @@ public class StandingUnit : MonoBehaviour
 
             if (benched)
             {
-                if (hitStandingUnitDisplay != this.standingUnitDisplay && hitStandingUnitDisplay.hasUnit == false)
+                if (hitStandingUnitDisplay != this.standingUnitDisplay && hitStandingUnitDisplay.hasUnit == false && UnitManager.currentUnits < UnitManager.maxUnits)
                 {
                     hitStandingUnitDisplay.ResetUnitDisplay();
                     hitStandingUnitDisplay.SetUnitData(standingUnitDisplay.unitData);

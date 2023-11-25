@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UnitManager : MonoBehaviour
 {
@@ -15,6 +17,48 @@ public class UnitManager : MonoBehaviour
     [SerializeField] List<GameObject> traitsPopupGameObjList = new List<GameObject>();
     [SerializeField] GameObject traitsPopupGameObjPrefab;
     [SerializeField] GameObject traitsPopupGameObjParent;
+
+    static public int currentUnits = 0;
+    static public int maxUnits = 1;
+
+    static public int exp = 0;
+    static public int level = 1;
+
+    static public int money = 100;
+    int rerollCost = 5;
+    int expCost = 5;
+
+    [SerializeField] TextMeshProUGUI unitText;
+    [SerializeField] TextMeshProUGUI levelText;
+    [SerializeField] TextMeshProUGUI moneyText;
+    [SerializeField] TextMeshProUGUI expText;
+
+    [SerializeField] GameObject exp1;
+    [SerializeField] GameObject exp2;
+    [SerializeField] GameObject exp3;
+
+    public void Reroll()
+    {
+        if (money >= rerollCost)
+        {
+            money -= rerollCost;
+            SetupShop();
+        }
+    }
+
+    public void BuyExp()
+    {
+        if (money >= expCost)
+        {
+            money -= expCost;
+            exp++;
+            if (exp >= 4)
+            {
+                level++;
+                exp = 0;
+            }
+        }
+    }
 
     void Start()
     {
@@ -38,6 +82,38 @@ public class UnitManager : MonoBehaviour
 
     void Update()
     {
+        unitText.text = currentUnits.ToString() + "/" + maxUnits.ToString();
+        levelText.text = level.ToString();
+        moneyText.text = money.ToString();
+        expText.text = exp.ToString() + " / 4";
+
+        if (exp == 0)
+        {
+            exp1.SetActive(false);
+            exp2.SetActive(false);
+            exp3.SetActive(false);
+        }
+        else if (exp == 1)
+        {
+            exp1.SetActive(true);
+            exp2.SetActive(false);
+            exp3.SetActive(false);
+        }
+        else if (exp == 2)
+        {
+            exp1.SetActive(true);
+            exp2.SetActive(true);
+            exp3.SetActive(false);
+        }
+        else if (exp == 3)
+        {
+            exp1.SetActive(true);
+            exp2.SetActive(true);
+            exp3.SetActive(true);
+        }
+
+        maxUnits = level;
+
         if (Input.GetKeyDown(KeyCode.Q))
         {
 
@@ -72,7 +148,7 @@ public class UnitManager : MonoBehaviour
             {
                 benchUnitDisplays[i].ResetUnitDisplay();
                 benchUnitDisplays[i].SetUnitData(unit);
-                benchUnitDisplays[i].UpdateUnitDisplay(true);
+                benchUnitDisplays[i].UpdateUnitDisplayFromShop();
                 return;
             }
         }
