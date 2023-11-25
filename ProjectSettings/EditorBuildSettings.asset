@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu Highfi.unity
     guid: 4b9b69133eb127c4aaaee0ca137e9d70
   - enabled: 1
-    path: Assets/Scenes/Loading Screen.unity
+    path: Assets/Scenes/Loading Screen Highfi.unity
     guid: c5958d4b57decab4cb6e4a38dd440d93
   - enabled: 1
     path: Assets/Scenes/Game Scene.unity
