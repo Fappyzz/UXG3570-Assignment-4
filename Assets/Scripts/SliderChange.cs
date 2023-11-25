@@ -18,16 +18,6 @@ public class SliderChange : MonoBehaviour
     public int fontSizeValue = 0;
     #endregion
 
-    void Start()
-    {
-        EventTrigger trigger = GetComponent<EventTrigger>();
-        EventTrigger.Entry entry = new EventTrigger.Entry();
-        entry.eventID = EventTriggerType.Drag;
-        entry.callback.AddListener((data) => { OnDragDelegate((PointerEventData)data); });
-        trigger.triggers.Add(entry);
-    }
-
-
     // Update is called once per frame
     void Update()
     {
