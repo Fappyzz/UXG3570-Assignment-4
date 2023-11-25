@@ -184,6 +184,11 @@ public class UnitManager : MonoBehaviour
     {
         unitDataList.Remove(unit);
         money += unit.unitCost;
+        currentUnits--;
+        for (int i = 0; i < unit.unitTraits.Count; i++)
+        {
+            CheckForTraitRemove(unit.unitTraits[i]);
+        }
     }
 
     bool CheckCan2Star(UnitData unit)
