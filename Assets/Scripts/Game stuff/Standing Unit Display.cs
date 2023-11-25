@@ -29,22 +29,22 @@ public class StandingUnitDisplay : MonoBehaviour
 
     }
 
-    public void UpdateUnitDisplay(bool benched)
+    public void UpdateUnitDisplay(bool setBenched, bool wasBenched)
     {
         unitData.unitSUD = this;
         spawnedUnit = Instantiate(unitData.unitPrefab);
         spawnedUnit.transform.position = spawnPos.transform.position;
         spawnedUnit.GetComponent<StandingUnit>().SetStandingUnitDisplay(this);
-        spawnedUnit.GetComponent<StandingUnit>().benched = benched;
+        spawnedUnit.GetComponent<StandingUnit>().benched = setBenched;
         hasUnit = true;
 
-        if (!benched)
-        {
-            UnitManager.currentUnits++;
-        }
-        else
+        if (setBenched && !wasBenched)
         {
             UnitManager.currentUnits--;
+        }
+        else if (!setBenched && wasBenched)
+        {
+            UnitManager.currentUnits++;
         }
     }
     
