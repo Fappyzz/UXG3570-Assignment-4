@@ -93,6 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4646405005483443003}
   - component: {fileID: 2327694839991539800}
+  - component: {fileID: 367028278307495590}
   - component: {fileID: 5300882147457052648}
   m_Layer: 0
   m_Name: Robot 2
@@ -139,6 +140,20 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   benched: 1
+--- !u!114 &367028278307495590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8424508461662692602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec7ecdd57bda81742bcb4c168c24afa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  message: 'Arc                 Unit Ability: Revives once upon death.'
+  unitArt: {fileID: 21300000, guid: 87a596f82f417f346a954b01cd4fc1f3, type: 3}
 --- !u!65 &5300882147457052648
 BoxCollider:
   m_ObjectHideFlags: 0

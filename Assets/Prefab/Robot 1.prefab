@@ -93,6 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7660088883021455133}
   - component: {fileID: 4097504692942326135}
+  - component: {fileID: 6077412466266226321}
   - component: {fileID: 1356786552371257886}
   m_Layer: 0
   m_Name: Robot 1
@@ -139,6 +140,21 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   benched: 1
+--- !u!114 &6077412466266226321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2927488295697101712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec7ecdd57bda81742bcb4c168c24afa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  message: 'Botty                 Unit Ability: Does 2 extra damage every time this
+    robot attacks.'
+  unitArt: {fileID: 21300000, guid: 3b96d088e0ffaaa448c7c64c22774b34, type: 3}
 --- !u!65 &1356786552371257886
 BoxCollider:
   m_ObjectHideFlags: 0
