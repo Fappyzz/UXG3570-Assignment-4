@@ -184,7 +184,7 @@ public class StandingUnit : MonoBehaviour
         }
         else if (SellDisplay.hoveringSell)
         {
-            standingUnitDisplay.unitMan.SellUnit(standingUnitDisplay.unitData);
+            standingUnitDisplay.unitMan.SellUnit(standingUnitDisplay.unitData, benched);
             standingUnitDisplay.ResetUnitDisplay();
         }
         else

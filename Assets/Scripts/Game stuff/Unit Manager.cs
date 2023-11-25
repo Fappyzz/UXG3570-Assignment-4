@@ -155,7 +155,6 @@ public class UnitManager : MonoBehaviour
                     benchUnitDisplays[i].SetUnitData(unit);
                     benchUnitDisplays[i].UpdateUnitDisplayFromShop();
 
-                    Debug.Log(benchUnitDisplays[i].unitData.unitStar);
                     return;
                 }
             }
@@ -177,10 +176,14 @@ public class UnitManager : MonoBehaviour
         
     }
 
-    public void SellUnit(UnitData unit)
+    public void SellUnit(UnitData unit, bool benched)
     {
         money += unit.unitCost;
-        currentUnits--;
+        if (!benched)
+        {
+            currentUnits--;
+        }
+        
         for (int i = 0; i < unit.unitTraits.Count; i++)
         {
             CheckForTraitRemove(unit.unitTraits[i]);
