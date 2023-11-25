@@ -21,4 +21,12 @@ public class Transitioner : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+    public void OnEnable()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            Invoke(nameof(DelayFade), 3f);
+        }
+    }
 }
