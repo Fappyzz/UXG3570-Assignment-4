@@ -37,15 +37,15 @@ public class SliderChange : MonoBehaviour
         sliderText.fontSize = slider.value + fontSizeValue;
 
         //if the font size goes above 100, cap it at 100
-        if (sliderText.fontSize > 100)
+        if (sliderText.fontSize > 50)
         {
-            sliderText.fontSize = 100;
+            sliderText.fontSize = 50;
         }
 
         //if the font size goes below 10, cap it at 60
-        if (sliderText.fontSize < 60)
+        if (sliderText.fontSize < 36)
         {
-            sliderText.fontSize = 60;
+            sliderText.fontSize = 36;
         }
     }
 
