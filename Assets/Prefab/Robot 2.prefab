@@ -152,7 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec7ecdd57bda81742bcb4c168c24afa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: 'Arc                 Unit Ability: Revives once upon death.'
+  message: Arc
+  message2: 'Unit Ability: Revives once upon death.'
   unitArt: {fileID: 21300000, guid: 87a596f82f417f346a954b01cd4fc1f3, type: 3}
 --- !u!65 &5300882147457052648
 BoxCollider:

@@ -9,6 +9,7 @@ public class TooltipManager : MonoBehaviour
     public static TooltipManager instance;
 
     public TextMeshProUGUI textComponent;
+    public TextMeshProUGUI textComponent2;
     public Image unitSprite;
 
     private void Awake()
@@ -36,10 +37,11 @@ public class TooltipManager : MonoBehaviour
         transform.position = Input.mousePosition;
     }
 
-    public void SetAndShowToolTip(string message, Sprite unitArt)
+    public void SetAndShowToolTip(string message, string message2, Sprite unitArt)
     {
         gameObject.SetActive(true);
         textComponent.text = message;
+        textComponent2.text = message2;
         unitSprite.sprite = unitArt;
     }
 

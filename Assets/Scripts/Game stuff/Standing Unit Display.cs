@@ -68,6 +68,8 @@ public class StandingUnitDisplay : MonoBehaviour
         unitData = null;
         
         hasUnit = false;
+
+        TooltipManager.instance.HideToolTip();
     }
 
     public void SetUnitMan(UnitManager unitMan)
