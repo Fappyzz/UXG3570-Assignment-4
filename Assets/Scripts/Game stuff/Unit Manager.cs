@@ -33,9 +33,9 @@ public class UnitManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI moneyText;
     [SerializeField] TextMeshProUGUI expText;
 
-    [SerializeField] GameObject exp1;
-    [SerializeField] GameObject exp2;
-    [SerializeField] GameObject exp3;
+    [SerializeField] public GameObject exp1;
+    [SerializeField] public GameObject exp2;
+    [SerializeField] public GameObject exp3;
 
     public void Reroll()
     {
