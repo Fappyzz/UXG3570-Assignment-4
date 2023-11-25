@@ -242,8 +242,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &21192088
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -718,8 +720,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &92153298
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2021,8 +2025,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &299241393
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2459,8 +2465,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &422006272
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2620,8 +2628,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &462524801
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3427,8 +3437,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &533805222
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3588,8 +3600,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &553657036
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3734,8 +3748,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &567888053
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3851,8 +3867,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!224 &575175739
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4091,8 +4109,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &607175720
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4221,8 +4241,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &630228898
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4650,8 +4672,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &674948292
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4780,8 +4804,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &674969200
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5119,8 +5145,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &692088238
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5192,6 +5220,95 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 692088235}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &708118204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 708118205}
+  - component: {fileID: 708118208}
+  - component: {fileID: 708118207}
+  - component: {fileID: 708118206}
+  m_Layer: 7
+  m_Name: Sell Box
+  m_TagString: SellZone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &708118205
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708118204}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1653798505}
+  m_Father: {fileID: 1854625023}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 115}
+  m_SizeDelta: {x: 1300, y: 230}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &708118206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708118204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8353bd35534859488abef066097591f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &708118207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708118204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &708118208
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708118204}
+  m_CullTransparentMesh: 1
 --- !u!1 &718208220
 GameObject:
   m_ObjectHideFlags: 0
@@ -5249,8 +5366,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &718208223
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5441,8 +5560,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &777814129
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5571,8 +5692,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &794303672
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5701,8 +5824,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &798300239
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5965,8 +6090,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &827002360
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6410,8 +6537,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &851191589
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6617,8 +6746,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &913186562
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6747,9 +6878,11 @@ MonoBehaviour:
       traitDesc: T B desc
       traitArt: {fileID: 21300000, guid: 90cb58717b7c85c439d48adb144e7e50, type: 3}
       traitCountThresholds: 0300000006000000
+    unitStar: 1
     unitArt: {fileID: 21300000, guid: 3b96d088e0ffaaa448c7c64c22774b34, type: 3}
     unitPrefab: {fileID: 2927488295697101712, guid: b98ee7bcb4786d546a87292780af7857,
       type: 3}
+    unitSUD: {fileID: 0}
   - unitName: Arc
     unitCost: 7
     unitDesc: Basic unit
@@ -6758,9 +6891,11 @@ MonoBehaviour:
       traitDesc: T C desc
       traitArt: {fileID: 21300000, guid: adc012dea665dbd49ab2ffc7a9c7f37d, type: 3}
       traitCountThresholds: 020000000400000006000000
+    unitStar: 1
     unitArt: {fileID: 21300000, guid: 87a596f82f417f346a954b01cd4fc1f3, type: 3}
     unitPrefab: {fileID: 8424508461662692602, guid: 5eacf0703de169745876510b0854bd51,
       type: 3}
+    unitSUD: {fileID: 0}
   - unitName: Corion
     unitCost: 7
     unitDesc: Basic unit
@@ -6773,9 +6908,11 @@ MonoBehaviour:
       traitDesc: T E desc
       traitArt: {fileID: 21300000, guid: 28b860d76a8713e4fb955aad0d7f6c22, type: 3}
       traitCountThresholds: 020000000400000006000000
+    unitStar: 1
     unitArt: {fileID: 21300000, guid: 20e922639784d9e40819d646b38f00f8, type: 3}
     unitPrefab: {fileID: 3195636654832198900, guid: 5b9521369575036418ca02d7a62382db,
       type: 3}
+    unitSUD: {fileID: 0}
 --- !u!1 &955335583
 GameObject:
   m_ObjectHideFlags: 0
@@ -7151,8 +7288,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!1 &995164250
 GameObject:
   m_ObjectHideFlags: 0
@@ -7419,6 +7558,7 @@ RectTransform:
   - {fileID: 854652239}
   - {fileID: 301806114}
   - {fileID: 1330586862}
+  - {fileID: 1854625023}
   - {fileID: 1329243189}
   - {fileID: 483688646}
   m_Father: {fileID: 0}
@@ -7485,8 +7625,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &1111241565
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7646,8 +7788,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &1119700792
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7807,8 +7951,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &1216056724
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7937,8 +8083,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &1225963911
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8428,8 +8576,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &1329512649
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8987,8 +9137,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &1374672061
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9192,8 +9344,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &1415592404
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9428,8 +9582,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &1444262219
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9794,8 +9950,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!1 &1485978827
 GameObject:
   m_ObjectHideFlags: 0
@@ -9987,8 +10145,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &1502538173
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10219,8 +10379,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &1541741262
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10442,8 +10604,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &1634816953
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10515,6 +10679,140 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1634816950}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1653798504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1653798505}
+  - component: {fileID: 1653798507}
+  - component: {fileID: 1653798506}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1653798505
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653798504}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 708118205}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 800, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1653798506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653798504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Drag here to sell
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 75
+  m_fontSizeBase: 75
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1653798507
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653798504}
+  m_CullTransparentMesh: 1
 --- !u!1 &1679567555
 GameObject:
   m_ObjectHideFlags: 0
@@ -10807,8 +11105,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &1701896353
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11012,8 +11312,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &1762664179
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11354,6 +11656,65 @@ Transform:
   m_Children: []
   m_Father: {fileID: 851191587}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1854625022
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1854625023}
+  - component: {fileID: 1854625025}
+  - component: {fileID: 1854625026}
+  m_Layer: 7
+  m_Name: Sell UI
+  m_TagString: SellZone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1854625023
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854625022}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 708118205}
+  m_Father: {fileID: 1093292063}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 115}
+  m_SizeDelta: {x: 1300, y: 230}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1854625025
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854625022}
+  m_CullTransparentMesh: 1
+--- !u!114 &1854625026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854625022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 453d434aba417da4995d3662f71cb124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sellUI: {fileID: 708118204}
 --- !u!1 &1864623527
 GameObject:
   m_ObjectHideFlags: 0
@@ -11411,8 +11772,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &1864623530
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11709,8 +12072,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!1 &1921196620
 GameObject:
   m_ObjectHideFlags: 0
@@ -11905,8 +12270,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &1995396192
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12184,8 +12551,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &2012459303
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12420,8 +12789,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &2065207824
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12896,8 +13267,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!1 &2089449029
 GameObject:
   m_ObjectHideFlags: 0
@@ -13048,8 +13421,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &2127581772
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13418,8 +13793,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &2137741650
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13548,8 +13925,10 @@ MonoBehaviour:
     unitCost: 0
     unitDesc: 
     unitTraits: []
+    unitStar: 1
     unitArt: {fileID: 0}
     unitPrefab: {fileID: 0}
+    unitSUD: {fileID: 0}
 --- !u!65 &2144423951
 BoxCollider:
   m_ObjectHideFlags: 0

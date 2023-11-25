@@ -37,6 +37,8 @@ public class UnitManager : MonoBehaviour
     [SerializeField] GameObject exp2;
     [SerializeField] GameObject exp3;
 
+    List<UnitData> unitDataList = new List<UnitData>();
+
     public void Reroll()
     {
         if (money >= rerollCost)
@@ -142,16 +144,81 @@ public class UnitManager : MonoBehaviour
 
     public void PurchaseUnit(UnitData unit)
     {
-        for (int i = 0; i < benchUnitDisplays.Count; i++)
+        if (CheckCan2Star(unit))
         {
-            if (benchUnitDisplays[i].hasUnit == false)
+            RemoveIngredients(unit);
+
+            for (int i = 0; i < benchUnitDisplays.Count; i++)
             {
-                benchUnitDisplays[i].ResetUnitDisplay();
-                benchUnitDisplays[i].SetUnitData(unit);
-                benchUnitDisplays[i].UpdateUnitDisplayFromShop();
-                return;
+                if (benchUnitDisplays[i].hasUnit == false)
+                {
+                    unit.unitStar = 2;
+                    benchUnitDisplays[i].ResetUnitDisplay();
+                    benchUnitDisplays[i].SetUnitData(unit);
+                    benchUnitDisplays[i].UpdateUnitDisplayFromShop();
+
+                    unitDataList.Add(benchUnitDisplays[i].unitData);
+                    return;
+                }
             }
         }
+        else
+        {
+            for (int i = 0; i < benchUnitDisplays.Count; i++)
+            {
+                if (benchUnitDisplays[i].hasUnit == false)
+                {
+                    benchUnitDisplays[i].ResetUnitDisplay();
+                    benchUnitDisplays[i].SetUnitData(unit);
+                    benchUnitDisplays[i].UpdateUnitDisplayFromShop();
+
+                    unitDataList.Add(benchUnitDisplays[i].unitData);
+                    return;
+                }
+            }
+        }
+        
+    }
+
+    public void SellUnit(UnitData unit)
+    {
+        unitDataList.Remove(unit);
+        money += unit.unitCost;
+    }
+
+    bool CheckCan2Star(UnitData unit)
+    {
+        int count = 0;
+
+        foreach (UnitData uD in unitDataList)
+        {
+            if (uD.unitName == unit.unitName)
+            {
+                count++;
+            }
+        }
+
+        if (count >= 2)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    void RemoveIngredients(UnitData unit)
+    {
+        foreach (UnitData uD in unitDataList)
+        {
+            if (uD.unitName == unit.unitName)
+            {
+                uD.unitSUD.ResetUnitDisplay();
+            }
+        }
+
+        unitDataList.RemoveAll(x => x.unitName == unit.unitName);
     }
 
     public void DeployUnit(UnitData unit)
@@ -170,25 +237,7 @@ public class UnitManager : MonoBehaviour
         }
     }
 
-    public void SellUnitFromBench(UnitData unit)
-    {
-        for (int i = 0; i < unit.unitTraits.Count; i++)
-        {
-            CheckForTraitRemove(unit.unitTraits[i]);
-        }
 
-        //gain money
-    }
-
-    public void SellUnitFromDeployed(UnitData unit)
-    {
-        for (int i = 0; i < unit.unitTraits.Count; i++)
-        {
-            CheckForTraitRemove(unit.unitTraits[i]);
-        }
-
-        //gain money
-    }
 
     public void CheckForTraitDeploy(UnitTrait trait)
     {

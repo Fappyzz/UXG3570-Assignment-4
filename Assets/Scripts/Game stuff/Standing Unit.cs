@@ -11,10 +11,19 @@ public class StandingUnit : MonoBehaviour
     Vector3 originalPosition;
     [SerializeField] LayerMask deployZone;
     [SerializeField] LayerMask benchZone;
+    [SerializeField] LayerMask sellZone;
 
     StandingUnitDisplay standingUnitDisplay;
 
     public bool benched = true;
+
+    private void Update()
+    {
+        if (standingUnitDisplay.unitData.unitStar >= 2)
+        {
+            this.gameObject.transform.localScale = new Vector3(2, 2, 2);
+        }
+    }
 
     void OnMouseDown()
     {
@@ -173,15 +182,21 @@ public class StandingUnit : MonoBehaviour
                 }
             }
         }
+        else if (SellDisplay.hoveringSell)
+        {
+            standingUnitDisplay.unitMan.SellUnit(standingUnitDisplay.unitData);
+            standingUnitDisplay.ResetUnitDisplay();
+        }
         else
         {
             transform.position = originalPosition;
         }
-
     }
 
     public void SetStandingUnitDisplay(StandingUnitDisplay standingUnitDisplay)
     {
         this.standingUnitDisplay = standingUnitDisplay;
     }
+
+    
 }

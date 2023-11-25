@@ -11,10 +11,11 @@ public class UnitData
     public int unitCost;
     public string unitDesc;
     public List<UnitTrait> unitTraits;
+    public int unitStar = 1;
 
 
     public Sprite unitArt;
     public GameObject unitPrefab;
 
-
+    public StandingUnitDisplay unitSUD;
 }

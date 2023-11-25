@@ -31,6 +31,7 @@ public class StandingUnitDisplay : MonoBehaviour
 
     public void UpdateUnitDisplay(bool benched)
     {
+        unitData.unitSUD = this;
         spawnedUnit = Instantiate(unitData.unitPrefab);
         spawnedUnit.transform.position = spawnPos.transform.position;
         spawnedUnit.GetComponent<StandingUnit>().SetStandingUnitDisplay(this);
@@ -49,6 +50,7 @@ public class StandingUnitDisplay : MonoBehaviour
     
     public void UpdateUnitDisplayFromShop()
     {
+        unitData.unitSUD = this;
         spawnedUnit = Instantiate(unitData.unitPrefab);
         spawnedUnit.transform.position = spawnPos.transform.position;
         spawnedUnit.GetComponent<StandingUnit>().SetStandingUnitDisplay(this);

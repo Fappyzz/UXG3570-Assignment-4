@@ -135,6 +135,9 @@ MonoBehaviour:
   benchZone:
     serializedVersion: 2
     m_Bits: 64
+  sellZone:
+    serializedVersion: 2
+    m_Bits: 128
   benched: 1
 --- !u!65 &3129464088106884448
 BoxCollider:
