@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu Highfi.unity
     guid: 4b9b69133eb127c4aaaee0ca137e9d70
   - enabled: 1
-    path: Assets/Scenes/Game Scene.unity
-    guid: 371e43e4796ef2d4bbd4472e09226af8
+    path: Assets/Scenes/Game Scene Hifi.unity
+    guid: 55e01b22456179247838d14af8d0b762
   m_configObjects: {}
